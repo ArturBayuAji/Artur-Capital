@@ -1,0 +1,97 @@
+<div class="card card-trade-log">
+    <!-- The image should be 800x400 on dimension-->
+    <img src="{{ url_for('static', filename='images/entry-ss-temp.png') }}" class="card-img-top" alt="...">
+    <!-- <div class="image-replacement">
+        <span class="image-replacement-text">No Image Yet</span>
+    </div> -->
+    <div class="card-body">
+
+        <div class="row card-body-row">
+            <div class="col-8 trade-desc round-corner">
+                <div class="row trade-desc-row">
+                    <div class="col-8 trade-position with-border-right">
+                        <div class="row">
+                            <div class="col-auto pair-info">
+                                <p class="pair">AUD/USD</p>
+                                <p class="entry-date text-grey">Apr 10th, 2024  08:00</p>
+                            </div>
+                            {% if type == "buy" %}
+                                {% include "trade-log-buy-symbol.html" %}
+                            {% else %}
+                                {% include "trade-log-sell-symbol.html" %}
+                            {% endif %}
+                        </div>
+                        <p class="note text-grey">Note: The strategy being used is dynamic, meaning SL & TP below is not absolute reference</p>
+                        <div>
+                            <div class="row entry-row">
+                                <div class="col-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+                                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                                    </svg>
+                                </div>
+                                <div class="col">Entry Level</div>
+                                <div class="col"><span class="entry-level-val">1932.3234</span></div>
+                            </div>
+                            <div class="row stop-loss-row">
+                                <div class="col-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                        <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708"/>
+                                    </svg>
+                                </div>
+                                <div class="col">Stop Loss</div>
+                                <div class="col"><span class="sl-val">1930.21233</span></div>
+                            </div>
+                            <div class="row take-profit-row">
+                                <div class="col-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                                    </svg>
+                                </div>
+                                <div class="col">Take Profit</div>
+                                <div class="col"><span class="tp-val">Trailing</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col indicator">
+                        <p class="island-sub-title">Indicator Appearance</p>
+                        <div class="indicator-appearance">
+                            <div class="row with-border-bottom pb-3">
+                                <div class="col-8">Indicator A</div>
+                                <div class="col">Yes</div>
+                            </div>
+                            <div class="row with-border-bottom pb-3">
+                                <div class="col-8">Indicator B</div>
+                                <div class="col">Yes</div>
+                            </div>
+                            <div class="row with-border-bottom pb-3">
+                                <div class="col-8">Indicator C</div>
+                                <div class="col">Yes</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Indicator D</div>
+                                <div class="col">Yes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col news round-corner">
+                <p class="island-sub-title">Potentially Affecting</p>
+                <div class="news-list">
+                    <p class="news-title" style="color: #FF3333">Non Farm Pay Roll</p>
+                    <p class="news-forcast text-grey">Forcast : 134.2</p>
+                    <p class="news-actual text-grey">Actual : -</p>
+                </div>
+                <div class="news-list">
+                    <p class="news-title" style="color: #FF8000">Other news</p>
+                    <p class="news-forcast text-grey">Forcast : 134.2</p>
+                    <p class="news-actual text-grey">Actual : -</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

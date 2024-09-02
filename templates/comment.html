@@ -1,0 +1,50 @@
+<!-- ================== one comment ================== -->
+<div class="comment-container">
+    <div class="with-border-bottom pb-3">
+        <div class="row comment-credentials-row">
+            <div class="col-auto user-profile">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="user-image-temp"></div>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <div>
+                            <p class="username">Artur Bayu</p>
+                            <p class="time-posted text-grey">23 min ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex flex-column justify-content-center referred-trade">
+                <div class="row">
+                    <div class="col-auto referred-trade-pair">
+                        <span class="pair">AUD/USD</span>
+                    </div>
+                    {% if type == "buy" %}
+                        {% include "comment-referred-trade-type-buy.html" %}
+                    {% else %}
+                        {% include "comment-referred-trade-type-sell.html" %}
+                    {% endif %}
+                    <div class="col referred-trade-entry-level">
+                        <span class="text-grey">Entry Level : 132.3234</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-three-dots my-three-dots" viewBox="0 0 16 16" >
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque error explicabo ipsum quasi veniam.</p>
+        <button type="button" class="btn btn-secondary like-btn">👍 0</button>
+        <button type="button" class="btn btn-secondary dislike-btn">👎 0</button>
+    </div>
+</div>

@@ -1,0 +1,827 @@
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+.text-blue {
+    color: #0062FF;
+}
+
+.text-grey {
+    color: #8c8c8c;
+    font-weight: 500;
+}
+
+.text-green {
+    color: #00cc00;
+}
+
+.text-red {
+    color: #FF3333;
+}
+
+.my-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-component {
+    font-weight: 500;
+}
+
+/* ======== INTRO RELATED ========= */
+
+.content-container {
+    padding: 45px;
+    background-color: #F0F1F6;
+}
+
+.intro-container {
+    background-color: white;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.my-intro {
+    display: flex;
+    align-items: center;
+    padding: 16px 50px;
+}
+
+.img-hero {
+    width: 100%;
+    min-width: 340px;
+    border-radius: 20px;
+}
+
+.moto {
+    font-weight: 600;
+}
+
+.intro-text {
+    line-height: 25px;
+}
+
+.join-investor-btn {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    height: 100%;
+    padding: 0 40px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+/* ========== TRADE HISTORY RELATED ========== */
+
+.island-title-container {
+    margin-bottom: 15px;
+}
+
+.trade-history, .pair-wise-winrate, .announcement {
+    background-color: white;
+    border-radius: 15px;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.trade-history, .pair-wise-winrate {
+    margin-bottom: 10px;
+}
+
+.trade-history-list {
+    background-color: #F0F1F6;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    line-height: 18px;
+    justify-content: space-between;
+}
+
+.history-equity-addition {
+    font-weight: 800;
+    font-size: 1.35rem;
+    padding: 0 0 0 10px;
+    display: flex;
+    align-items: center;
+    max-width: 6.4rem;
+    min-width: 6rem;
+}
+
+.history-pair-size {
+    font-size: 0.9rem;
+}
+
+.history-pair {
+    font-weight: 680;
+}
+
+.history-date-time {
+    font-size: 0.875rem;
+}
+
+
+/* ============ PAIR WISE WINRATE RELATED ============== */
+
+.pair-wise-wr-list-container {
+    padding: 0 24px 0 24px;
+}
+
+.pair-wise-wr {
+    padding-left: 0;
+}
+
+.pair-wise-wr .pair {
+    font-weight: 750;
+}
+
+.pair-wise-wr .pair-winrate {
+    font-size: 1.5rem;
+}
+
+.win-lost-count {
+    padding-right: 0;
+}
+
+.n-win {
+    color: #00cc00;
+}
+
+.n-lose {
+    color: #ff3333;
+}
+
+.pair-wr-list {
+    border-bottom: 2px solid #f0f1f6;
+    margin-bottom: 10px;
+    line-height: 20px;
+    padding-bottom: 7px;
+    justify-content: space-between;
+}
+
+/* ========== ANNOUNCEMENT RELATED =========== */
+
+.announcement-list .title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.announcement-brief {
+    line-height: 20px;
+}
+
+.announcement-link {
+    text-decoration: none;
+    color: black;
+}
+
+.announcement-link:hover {
+    color: #0062ff;
+}
+
+
+/* unstructured */
+
+.trade-information-first-col {
+    min-width: 70%;
+}
+
+.trade-information-second-col {
+    /*margin-left: 18px;*/
+    padding-left: 30px;
+    /*padding: 0;*/
+}
+
+.island-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.island-padding {
+    padding: 37px 15px;
+}
+
+.footer-container {
+    padding: 45px;
+}
+
+.filter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    padding: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 5px;
+}
+
+.filter-button:hover {
+    border: 1px solid black;
+}
+
+.svg-black {
+    color: black;
+}
+
+/* ======== PERFORMANCE RELATED ========= */
+
+.performance {
+    margin-bottom: 10px;
+}
+
+.performance-island {
+    padding: 12px;
+    height: 100%
+}
+
+.assets-container {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.profit-accum, .winrate-accum, .investors, .assets-track, .experience-track {
+    margin-bottom: 10px;
+}
+
+.winrate-accum {
+    padding: 0 5px;
+}
+
+.profit-accum, .assets-track {
+    padding-left: 0;
+    padding-right: 5px;
+}
+.investors,.experience-track {
+    padding-right: 0;
+    padding-left: 5px;
+}
+
+.white-bg-performance {
+    border-radius: 15px;
+    min-height: 10rem;
+    background-color: white;
+}
+
+.white-bg-performance:hover {
+    background-color: #0062ff;
+}
+
+.white-bg-performance:hover * {
+    color: white;
+}
+
+/*.first {
+    margin-right: 6px;
+}
+
+.second {
+    margin: 0 6px
+}
+
+.third {
+    margin-left: 6px;
+}*/
+
+.blue-bg-performance {
+    border-radius: 15px;
+    min-height: 10rem;
+    height: 100%;
+    background-color: #0062ff;
+}
+
+.blue-bg-performance * {
+    color: white;
+}
+
+.white-bg-svg {
+    border-radius: 8px;
+    padding: 3px 8px 5px 8px;
+    background-color: #F2F3F7;
+}
+
+.white-bg-performance:hover .white-bg-svg {
+    background-color: #0085FF;
+}
+
+.blue-bg-svg {
+    border-radius: 8px;
+    padding: 3px 8px 5px 8px;
+    background-color: #0085FF;
+}
+
+.extra-pd-bottom {
+    padding-bottom: 6px;
+}
+
+.extra-pd-top {
+    padding-top: 4px;
+}
+
+.blue-bg-performance:hover .blue-bg-svg {
+    background-color: #F2F3F7;
+}
+
+.blue-bg-performance:hover {
+    background-color: white;
+}
+
+.blue-bg-performance:hover * {
+    color: black;
+}
+
+.asset-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.asset-value {
+    text-align: end;
+    font-size: 1.1rem;
+}
+
+/*.fourth {
+    margin-right: 6px;
+    padding: 20px 60px;
+    display: grid;
+    place-items: center;
+}*/
+
+.centered-element {
+    width: 100%;
+}
+
+/*.fifth {
+    margin-left: 6px;
+}*/
+
+.white-bg-performance-title {
+    font-weight: 700;
+}
+
+.performance-main {
+    margin-bottom: 0;
+    line-height: 3rem;
+}
+
+.net-profit {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.winrate {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.equity-profit {
+    font-size: 1.125rem;
+}
+
+.total-investors {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.experience {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.n-investors {
+    font-size: 3rem;
+}
+
+.performance-desc {
+    color: #8C8C8C;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+
+.performance-content-container {
+    margin-left: 40px;
+}
+
+/* ======== TRADE LOG RELATED ========= */
+
+.trade-log {
+    background-color: white;
+    border-radius: 18px;
+}
+
+.with-border-right {
+    border-right: 2px solid #ced4da;
+}
+
+.card-trade-log {
+    width: 100%;
+    background-color: #F0F1F6;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.trade-log-container {
+    margin-bottom: 45px;
+}
+
+.trade-desc {
+    background-color: white;
+    min-height: 10rem;
+    margin: 0 5px 0 20px;
+    padding: 30px;
+}
+
+.trade-desc .pair {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 30px;
+}
+
+.trade-desc .entry-date {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.trade-desc .type-container {
+    border-radius: 40px;
+    padding: 5px 20px 5px 18px;
+}
+
+.trade-desc .type {
+    font-size: 1.4rem;
+    padding: 0 0 0 5px;
+}
+
+.trade-desc .note {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 0.93rem;
+}
+
+.entry-row, .stop-loss-row {
+    margin-bottom: 16px;
+}
+
+.indicator {
+    display: flex;
+    flex-direction: column;
+}
+
+.indicator-appearance {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.island-sub-title {
+    font-weight: 700;
+}
+
+.with-border-bottom {
+    border-bottom: 2px solid #f0f1f6;
+}
+
+.news {
+    background-color: white;
+    margin: 0 20px 0 5px;
+    padding: 30px;
+}
+
+.news-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.news-list {
+    margin-bottom: 12px;
+}
+
+.news-forcast, .news-actual {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 17px;
+}
+
+.round-corner {
+    border-radius: 15px;
+}
+
+.image-replacement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 387.5px;
+}
+
+.image-replacement-text {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #adb5bd;
+}
+
+.entry-level-val, .sl-val, .tp-val {
+    padding-left: 30%;
+}
+
+/* FOOTER RELATED STYLES */
+
+.disclaimers {
+    margin-top: 50px;
+}
+
+.footer_components_container {
+    display: inline-block;
+    max-width: 130px;
+}
+
+.footer_components_container_medium {
+    display: inline-block;
+    max-width: 190px;
+}
+
+.social_media_text_container {
+    min-width: 95px;
+}
+
+.icon-link svg {
+    font-size: 2.3em;
+}
+
+.icon-color-blue {
+    color: #0062FF;
+}
+
+.icon-color-blue:hover {
+    color: #0E46A3;
+}
+
+.like-btn, .dislike-btn {
+    border-radius: 40px;
+    background-color: #F0F1F6;
+    color: black;
+    border-color: #F0F1F6;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+    background-color: #adb5bd;
+    border-color: #adb5bd;
+}
+
+/* =========== COMMENT SECTION ============ */
+
+.comment-container {
+    margin-bottom: 28px;
+}
+
+.user-image-temp {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #F0F1F6;
+}
+
+.comment {
+    margin-bottom: 25px;
+}
+
+.username, .time-posted {
+    margin-bottom: 0;
+}
+
+.comment-credentials-row {
+    margin-bottom: 20px;
+}
+
+.my-three-dots {
+    color: #adb5bd;
+    transition: transform 0.2s ease-in-out;
+}
+
+.comment-symbol {
+    border-radius: 30px;
+    padding: 5px 11px;
+}
+
+.comment-credentials-row .text-grey {
+    font-weight: 400;
+}
+
+.comment-credentials-row .username {
+    font-weight: 700;
+}
+
+.comment-credentials-row .pair {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.referred-trade-entry-level {
+    padding-left: 30px;
+}
+
+.btn:hover .my-three-dots {
+    transform: scale(1.2);
+    color: #8C8C8C;
+}
+
+
+
+
+
+@media (max-width: 430px) {
+    .entry-level-val, .sl-val, .tp-val {
+        padding-left: 0;
+    }
+    .login-btn-col {
+        padding-left: 0;
+    }
+    .login-btn {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-intro {
+        padding: 16px 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    .card-body-row {
+        display: block;
+    }
+    .trade-desc {
+        width: 100%;
+        margin: 0 0 5px 0;
+    }
+    .news {
+        margin: 0;
+    }
+    .content-container {
+        padding: 20px 20px 50px 20px;
+    }
+}
+
+
+/* ========= PERFORMANCE responsive ========= */
+
+@media (max-width: 950px) {
+    .profit-accum {
+        min-width: 50%;
+    }
+    .winrate-accum {
+        min-width: 50%;
+        padding-right: 0;
+    }
+    .investors {
+        padding-left: 0;
+        padding-right: 5px;
+    }
+    .assets-track {
+        order: 5;
+        min-width: 100%;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .profit-accum, .winrate-accum, .investors, .experience-track {
+        min-width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .assets-container {
+        padding: 30px 40px;
+    }
+}
+
+/* ===================================== */
+
+@media (max-width: 910px) {
+    .trade-desc-row {
+        display: block;
+    }
+    .trade-position {
+        width: 100%;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+    .img-hero-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .img-hero {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .img-hero-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1320px) {
+    .second-col-row {
+        display: block;
+    }
+    .trade-history-column, .pair-wise-wr-column, .announcement-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1319px) {
+    .trade-information-row {
+        display: block;
+    }
+    .trade-information-second-col {
+        padding: 0 12px;
+    }
+    .second-col-row {
+        margin-top: 22px;
+    }
+    .trade-history-column {
+        padding-right: 17px;
+        width: 33.3%;
+    }
+    .pair-wise-wr-column {
+        padding-left: 17px;
+        width: 33.3%;
+    }
+    .announcement-column {
+        padding-left: 22px;
+        width: 33.3%
+    }
+}
+
+@media (max-width: 1123px) {
+    .trade-history-column {
+        width: 50%;
+    }
+    .pair-wise-wr-column {
+        width: 50%;
+    }
+    .announcement-column {
+        width: 100%;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 726px) {
+    .trade-history-column {
+        width: 100%;
+        padding: 0 12px;
+    }
+    .pair-wise-wr-column {
+        width: 100%;
+        padding: 0 12px;
+    }
+}
+
+/* ================ COMMENTS responsive ================ */
+
+@media (max-width: 710px) {
+    .referred-trade-entry-level {
+        padding-left: 12px;
+    }
+}
+
+@media (max-width: 690px) {
+    .referred-trade-entry-level {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 510px) {
+    .referred-trade {
+        order: 3;
+        min-width: 100%;
+        margin-top: 16px;
+    }
+    .comment-credentials-row {
+        justify-content: space-between;
+    }
+    .comment-container {
+        padding: 0;
+    }
+}
+
+/* ===================================================== */
