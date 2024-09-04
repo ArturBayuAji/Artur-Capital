@@ -1,0 +1,22 @@
+{% extends "register-base.html" %}
+{% block content %}
+<div class="container-fluid outer d-flex align-items-center justify-content-center">
+    <div class="island">
+        <p class="castoro-titling-regular my-brand mb-2">ARTUR CAPITAL</p>
+        <p class="island-title mb-0">Welcome Back</p>
+        <p class="text-grey island-subtitle">Hi There! Glad to see you again. Login to your account below.</p>
+        <form method="POST" action="#" class="my-custom-form">
+            {{ form.csrf_token }}
+
+            {{ form.username.label(class_="text-grey") }} <br>
+            {{ form.username(class_="form-control mb-3") }}
+
+            {{ form.password.label(class_="text-grey") }} <br>
+            {{ form.password(class_="form-control mb-4") }}
+
+            {{ form.login(class_="btn btn-primary register-button mb-4") }}
+        </form>
+        <p class="text-grey">Don't have an account? <a href="{{ url_for('register') }}" class="my-link">Create an Account</a></p>
+    </div>
+</div>
+{% endblock %}

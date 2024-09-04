@@ -2,6 +2,13 @@
     font-family: "Manrope", sans-serif;
 }
 
+.castoro-titling-regular {
+    font-family: "Castoro Titling", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 .text-blue {
     color: #0062FF;
 }
@@ -20,8 +27,8 @@
 }
 
 .my-brand {
-    font-weight: 600;
-    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-size: 1.7rem;
 }
 
 .nav-component {

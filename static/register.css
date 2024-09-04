@@ -1,0 +1,80 @@
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+.castoro-titling-regular {
+    font-family: "Castoro Titling", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.outer {
+    min-height: 100vh;
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=adcdff&c2=ffffff&gt=l&gd=dtl
+    */
+    background: #ADCDFF;
+    background: linear-gradient(135deg, #ADCDFF, #FFFFFF);
+}
+
+.my-brand {
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.island {
+    max-width: 580px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.island-title {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.island-subtitle {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.text-grey {
+    color: #858585;
+}
+
+.my-custom-form {
+    width: 100%;
+}
+
+.register-button {
+    width: 100%;
+}
+
+.my-link {
+    color: #0062FF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.my-link:hover {
+    color: #0000C5;
+}
+
+
+@media (max-width: 435px) {
+    .outer {
+        padding: 0;
+    }
+    .island {
+        height: 100vh;
+        border-radius: 0;
+    }
+}

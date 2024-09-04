@@ -1,0 +1,32 @@
+{% extends "register-base.html" %}
+{% block content %}
+<div class="container-fluid outer d-flex align-items-center justify-content-center">
+    <div class="island">
+        <p class="castoro-titling-regular my-brand mb-2">ARTUR CAPITAL</p>
+        <p class="island-title mb-0">Create New Account</p>
+        <p class="text-grey island-subtitle">Enter your details below to create your account and get started.</p>
+        <form method="POST" action="#" class="my-custom-form">
+            {{ form.csrf_token }}
+
+            {{ form.username.label(class_="text-grey") }} <br>
+            {{ form.username(class_="form-control mb-3") }}
+
+            {{ form.email.label(class_="text-grey") }} <br>
+            {{ form.email(class_="form-control mb-3") }}
+
+            {{ form.password.label(class_="text-grey") }} <br>
+            {{ form.password(class_="form-control mb-4") }}
+
+            <div class="row mb-4">
+                <div class="col">
+                    <a class="btn btn-primary register-button" href="#" role="button">Cancel</a>
+                </div>
+                <div class="col">
+                    {{ form.submit(class_="btn btn-primary register-button") }}
+                </div>
+            </div>
+        </form>
+        <p class="text-grey">Already have an account? <a href="{{ url_for('login') }}" class="my-link">Login</a></p>
+    </div>
+</div>
+{% endblock %}
