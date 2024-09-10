@@ -459,12 +459,12 @@
     margin: 0;
 }
 
-.trade-desc .type-container {
+.type-container-trade-desc {
     border-radius: 40px;
     padding: 5px 20px 5px 18px;
 }
 
-.trade-desc .type {
+.trade-desc-type {
     font-size: 1.4rem;
     padding: 0 0 0 5px;
 }
@@ -719,6 +719,12 @@
 }
 
 /* ===================================== */
+
+@media (max-width: 576px) {
+    .new-trade-btn {
+        margin-top: 12px;
+    }
+}
 
 @media (max-width: 910px) {
     .trade-desc-row {

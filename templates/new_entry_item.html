@@ -1,0 +1,94 @@
+<div class="col-lg-6 island-col">
+    <div class="new-entry-island">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-auto symbol">AUDUSD</div>
+                    {% include "trade-log-buy-symbol.html" %}
+                </div>
+            </div>
+            <div class="col-auto">
+                <p class="ticket-text">Ticket:</p>
+                <p class="ticket-id">5230077134</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row trade-data-row">
+            <div class="col trade-data-col">
+                <p>Volume</p>
+                <p class="mb-0">0.01</p>
+            </div>
+            <div class="col trade-data-col">
+                <p>Price</p>
+                <p class="mb-0">1.78503</p>
+            </div>
+            <div class="col trade-data-col">
+                <p>Stop Loss</p>
+                <p class="mb-0">1.80136</p>
+            </div>
+            <div class="col trade-data-col">
+                <p>Take Profit</p>
+                <p class="mb-0">1.75140</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="indicator-input">
+            <form method="POST" action="{{ url_for('new_trade') }}" enctype="multipart/form-data">
+                {{ form.csrf_token }}
+                <div class="row">
+                    <div class="col">
+                        <p> {{ form.slow_ma.label }}</p>
+                    </div>
+                    {% for subfield in form.slow_ma %}
+                    <div class="col-auto">
+                        {{ subfield() }} {{ subfield.label.text }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p> {{ form.moderate_ma.label }}</p>
+                    </div>
+                    {% for subfield in form.moderate_ma %}
+                    <div class="col-auto">
+                        {{ subfield() }} {{ subfield.label.text }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p> {{ form.fast_ma.label }}</p>
+                    </div>
+                    {% for subfield in form.fast_ma %}
+                    <div class="col-auto">
+                        {{ subfield() }} {{ subfield.label.text }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p> {{ form.osma.label }}</p>
+                    </div>
+                    {% for subfield in form.osma %}
+                    <div class="col-auto">
+                        {{ subfield() }} {{ subfield.label.text }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div>
+                    {{ form.chart_capture.label }}
+                    {{ form.chart_capture() }} <br>
+                    {% for error in form.chart_capture.errors %}
+                    <span style="color: red;">[{{ error }}]</span><br>
+                    {% endfor %}
+                    <p class="mb-3"><i>note: the dimension should be 800x400 pixels</i></p>
+                </div>
+                <div>
+                    {{ form.update(class="btn btn-primary upload-button") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

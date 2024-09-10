@@ -1,0 +1,30 @@
+[
+    {
+        "id": "5230077134",
+        "platform": "mt5",
+        "type": "POSITION_TYPE_SELL",
+        "symbol": "EURNZD",
+        "magic": 0,
+        "time": "2024-09-05T20:53:07.411Z",
+        "brokerTime": "2024-09-05 23:53:07.411",
+        "updateTime": "2024-09-05T20:53:07.411Z",
+        "openPrice": 1.78503,
+        "volume": 0.01,
+        "swap": 0,
+        "commission": 0,
+        "realizedSwap": 0,
+        "realizedCommission": 0,
+        "unrealizedSwap": 0,
+        "unrealizedCommission": 0,
+        "reason": "POSITION_REASON_CLIENT",
+        "currentPrice": 1.78633,
+        "currentTickValue": 0.62212,
+        "realizedProfit": 0,
+        "unrealizedProfit": -0.80876,
+        "profit": -0.81,
+        "accountCurrencyExchangeRate": 1,
+        "stopLoss": 1.80136,
+        "takeProfit": 1.7514,
+        "updateSequenceNumber": 1725569587411038
+    }
+]

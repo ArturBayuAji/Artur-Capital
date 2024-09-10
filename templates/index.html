@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Artur Capital{% endblock %}
+{% block custom_css %}<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">{% endblock %}
+{% block navbar %}{% include "home_navbar.html" %}{% endblock %}
+
 {% block content %}
 <div class="container-xxl content-container">
 
@@ -171,7 +174,14 @@
             <div class="row trade-log island-padding">
                 {% set type = "buy" %}
                 <!-- Trade Log Section -->
-                <h5 class="island-title">Running Trade</h5>
+                <div class="row mb-3">
+                    <div class="col-sm d-flex align-items-center">
+                        <h5 class="island-title mb-0">Running Trade</h5>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-primary px-4 py-2 new-trade-btn" href="{{ url_for('new_trade') }}" role="button">New Trade</a>
+                    </div>
+                </div>
                 {% include "trade-log.html" %}
 
 
@@ -271,3 +281,5 @@
     </div>
 </div>
 {% endblock %}
+
+{% block footer %}{% include "home_footer.html" %}{% endblock %}
