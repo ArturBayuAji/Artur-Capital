@@ -1,20 +1,20 @@
+import os
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap5
 from dotenv import load_dotenv
 from werkzeug.utils import secure_filename
-
-import os
-
 from my_forms import RegisterForm, LoginForm, IndicatorAppearance
+from my_database import db, SymbolCategory, Symbol
+from symbols_helper import pre_populate_forex_symbols
 
 load_dotenv()
 secret_key = os.environ['flask_secret_key']
-
 app = Flask(__name__)
 app.secret_key = secret_key
 app.config["UPLOAD_FOLDER"] = r"static\chart_ss"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
+db.init_app(app)
 bootstrap = Bootstrap5(app)
-
 # Ensure the upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
@@ -75,4 +75,8 @@ def new_trade():
 
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+        pre_populate_forex_symbols()
+
     app.run(debug=True)
