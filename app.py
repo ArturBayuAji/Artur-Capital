@@ -3,6 +3,8 @@ from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap5
 from dotenv import load_dotenv
 from werkzeug.utils import secure_filename
+from flask_migrate import Migrate
+
 from my_forms import RegisterForm, LoginForm, IndicatorAppearance
 from my_database import db, SymbolCategory, Symbol
 from symbols_helper import pre_populate_forex_symbols
@@ -14,6 +16,7 @@ app.secret_key = secret_key
 app.config["UPLOAD_FOLDER"] = r"static\chart_ss"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
 db.init_app(app)
+migrate = Migrate(app, db)
 bootstrap = Bootstrap5(app)
 # Ensure the upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
@@ -33,7 +36,10 @@ def terms_and_services():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        redirect(location='home')
+        username = form.username.data
+        email = form.email.data
+        password = form.password.data
+        return redirect(url_for('home'))
     return render_template(template_name_or_list="register.html", form=form)
 
 
@@ -41,7 +47,7 @@ def register():
 def login():
     form = LoginForm()  # re-use the Register Form
     if form.validate_on_submit():
-        redirect(location='home')
+        return redirect(url_for('home'))
     return render_template(template_name_or_list="login.html", form=form)
 
 

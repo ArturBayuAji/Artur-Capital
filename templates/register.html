@@ -5,7 +5,7 @@
         <p class="castoro-titling-regular my-brand mb-2">ARTUR CAPITAL</p>
         <p class="island-title mb-0">Create New Account</p>
         <p class="text-grey island-subtitle">Enter your details below to create your account and get started.</p>
-        <form method="POST" action="#" class="my-custom-form">
+        <form method="POST" action="{{ url_for('register') }}" class="my-custom-form">
             {{ form.csrf_token }}
 
             {{ form.username.label(class_="text-grey") }} <br>
