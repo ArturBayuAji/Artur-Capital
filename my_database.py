@@ -2,6 +2,7 @@ from sqlalchemy import ForeignKey, UniqueConstraint
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from typing import List
+from flask_login import UserMixin
 
 
 class Base(DeclarativeBase):
@@ -38,7 +39,7 @@ class Symbol(Base):
     )
 
 
-class User(Base):
+class User(Base, UserMixin):
     # TODO: Add activate or deactivate user feature.
     __tablename__ = "user"
 
@@ -46,6 +47,8 @@ class User(Base):
     username: Mapped[str] = mapped_column(unique=True, nullable=False)
     email: Mapped[str] = mapped_column(unique=True, nullable=False)
     password: Mapped[str] = mapped_column(nullable=False)
+    agree_to_terms_services: Mapped[bool] = mapped_column(nullable=False, default=False)
+    agree_to_receive_notifs: Mapped[bool] = mapped_column(nullable=False, default=False)
 
     comments: Mapped[List["Comment"]] = relationship(
         "Comment",

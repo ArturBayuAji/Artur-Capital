@@ -17,10 +17,17 @@
             {{ form.password.label(class_="text-grey") }} <br>
             {{ form.password(class_="form-control mb-4") }}
 
+            <div class="row mb-2">
+                <div class="col-auto">{{ form.agree_to_terms_services() }}</div>
+                <div class="col">{{ form.agree_to_terms_services.label }}</div>
+            </div>
+
             <div class="row mb-4">
-                <div class="col">
-                    <a class="btn btn-primary register-button" href="#" role="button">Cancel</a>
-                </div>
+                <div class="col-auto">{{ form.agree_to_receive_notifs() }}</div>
+                <div class="col">{{ form.agree_to_receive_notifs.label }}</div>
+            </div>
+
+            <div class="row mb-4">
                 <div class="col">
                     {{ form.submit(class_="btn btn-primary register-button") }}
                 </div>

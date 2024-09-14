@@ -18,10 +18,7 @@
                         <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquid eum facere magnam maxime non placeat quaerat reprehenderit saepe. Ab consequatur cumque deserunt doloremque error et fuga id, illum iusto libero maiores modi molestiae nemo, neque omnis pariatur praesentium quidem soluta temporibus voluptate! A earum, et exercitationem labore natus nostrum numquam rem sint veniam. Doloribus dolorum et ipsa necessitatibus ratione!</p>
                         <div class="row">
                             <div class="col-auto">
-                                <a class="btn btn-primary join-investor-btn" href="#" role="button">Join As Investor</a>
-                            </div>
-                            <div class="col-auto login-btn-col">
-                                <a class="btn btn-primary login-btn" href="{{ url_for('login') }}" role="button"><span>Login</span></a>
+                                <a class="btn btn-primary join-investor-btn" href="#" role="button">Join Me as My Investor</a>
                             </div>
                         </div>
                     </div>
@@ -204,7 +201,7 @@
                                         <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
                                     </svg>
                                 </button>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu dropdown-menu-end">
                                         <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -235,7 +232,7 @@
                                         <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
                                     </svg>
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu dropdown-menu-end">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -280,6 +277,34 @@
         </div>
     </div>
 </div>
+
+<!-- Flash messages as Bootstrap alerts -->
+<div class="floating-alert">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
 {% endblock %}
 
+
 {% block footer %}{% include "home_footer.html" %}{% endblock %}
+
+
+{% block custom_script %}
+<!-- JavaScript to auto-hide the alerts after 5 seconds -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Automatically close the alert after 5 seconds
+        setTimeout(function() {
+            $(".alert").alert('close');
+        }, 4000);
+    });
+</script>
+{% endblock %}

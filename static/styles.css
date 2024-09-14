@@ -35,6 +35,32 @@
     font-weight: 500;
 }
 
+/* ======== NAVBAR RELATED ======== */
+
+.my-nav-link {
+    transition: transform 0.08s ease-in-out;
+}
+
+.my-nav-link:hover {
+    transform: scale(1.05);
+}
+
+.my-dropdown-menu {
+    padding: 20px;
+}
+
+.logout {
+    color: #FF3333;
+}
+
+.logout:hover {
+    color: #FF3333;
+}
+
+.logout:active {
+    color: white;
+}
+
 /* ======== INTRO RELATED ========= */
 
 .content-container {
@@ -70,7 +96,7 @@
 }
 
 .join-investor-btn {
-    padding: 10px 20px;
+    padding: 10px 35px;
     font-weight: 500;
 }
 
@@ -645,6 +671,14 @@
     color: #8C8C8C;
 }
 
+
+.floating-alert {
+    position: fixed;
+    top: 10px;
+    left: 50%; /* Start at 50% from the left */
+    transform: translateX(-50%); /* Move it back by 50% of its width to center it */
+    z-index: 9999;
+}
 
 
 

@@ -68,6 +68,12 @@
     color: #0000C5;
 }
 
+.error_message {
+    font-weight: 500;
+    color: red;
+    font-size: 1.1rem;
+}
+
 
 @media (max-width: 435px) {
     .outer {

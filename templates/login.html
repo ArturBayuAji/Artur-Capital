@@ -5,7 +5,14 @@
         <p class="castoro-titling-regular my-brand mb-2">ARTUR CAPITAL</p>
         <p class="island-title mb-0">Welcome Back</p>
         <p class="text-grey island-subtitle">Hi There! Glad to see you again. Login to your account below.</p>
-        <form method="POST" action="#" class="my-custom-form">
+        {% with messages = get_flashed_messages() %}
+           {% if messages %}
+              {% for message in messages %}
+                 <p class="error_message">{{ message }}</p>
+              {% endfor %}
+           {% endif %}
+        {% endwith %}
+        <form method="POST" action="{{ url_for('login') }}" class="my-custom-form">
             {{ form.csrf_token }}
 
             {{ form.username.label(class_="text-grey") }} <br>

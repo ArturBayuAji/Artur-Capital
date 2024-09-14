@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import validators, StringField, PasswordField, EmailField, SubmitField, RadioField, FileField
+from wtforms import validators, StringField, PasswordField, EmailField, SubmitField, RadioField, FileField, BooleanField
 from flask_wtf.file import FileRequired, FileAllowed
 
 
@@ -7,7 +7,12 @@ class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[validators.DataRequired()])
     email = EmailField('Email', validators=[validators.DataRequired(), validators.Email()])
     password = PasswordField('Password', validators=[validators.DataRequired()])
-    submit = SubmitField('Confirm')
+    agree_to_terms_services = BooleanField("I agree to the terms of services.", validators=[validators.DataRequired()])
+    agree_to_receive_notifs = BooleanField(
+        "I want to be notified of exclusive offers, news product, upcoming betas, and the latest news from "
+        "Artur-Capital. (Optional)",
+    )
+    submit = SubmitField('Create Account')
 
 
 class LoginForm(FlaskForm):
