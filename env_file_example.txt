@@ -1,0 +1,31 @@
+---- THIS FILE AIMS TO SHOW YOU ABOUT WHAT YOU SHOULD HAVE INSIDE YOUR `.env` FILE, or just copy this code below, paste
+it on your `.env` file and change all the variables value (not the variable name) ----
+
+
+
+# your application secret key (make it as random and as possible)
+flask_secret_key = "some long and random secret key"
+
+# only one trader and one MetaTrader account supported right now
+# 1. SETUP TRADER DATA
+# this data belong to someone who will make the trading transaction
+trader_username = "Chiara" # this username will be used as the page's brand i.e. 'CHIARA-CAPITAL'.
+trader_email = "example@gmail.com"
+password = "password"
+
+# 2. SETUP TRADER'S MetaTrader ACCOUNT
+# steps to take :
+#   2.1 Create a trading account on your Broker.
+#   2.2 Register then login your self on MetaAPI website (https://metaapi.cloud/)
+#   2.3 Register your trading account by :
+#       - add your trading account on `MT Accounts` section, then you will get the `ID` of your account, place your
+#         account id as the value of `meta_api_account_id` variable below.
+#       - on `API Access` section, you can click `Generate API access token` and pass the token into
+#         `meta_api_auth_token` variable below. Note that the authentication token only last for 3 months, you might
+#         want to re-generate the token again before it reach that period.
+meta_api_account_id = "your MetaAPI account id"
+meta_api_auth_token = "your MetaAPI authentication token"
+
+
+
+
